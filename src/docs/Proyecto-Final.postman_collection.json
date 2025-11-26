@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "f49897ab-08b6-422b-9ad0-20b7c3a58ef7",
+		"name": "Proyecto-Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48376079",
+		"_collection_link": "https://alexmax123max-2155008.postman.co/workspace/Miguel-Cordova-Team's-Workspace~25b3a8aa-8002-44a7-8e4d-a04a0d605855/collection/48376079-f49897ab-08b6-422b-9ad0-20b7c3a58ef7?action=share&source=collection_link&creator=48376079"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"cordova\",\r\n  \"email\": \"cordova@example.com\",\r\n  \"password\": \"123456\",\r\n  \"roles\": [\"admin\"] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/auth/signup",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"alex\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/auth/signin",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/auth/signout",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/test/all",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"test",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Only",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4Y2FjODY5NzYzYTQzY2QyODY2YSIsImlhdCI6MTc2NDEzNDA4NiwiZXhwIjoxNzY0MjIwNDg2fQ.3xBU6BxsLbzbwQMjRzDsqsXo4ALgaBoi9A2KJmwVbLQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/test/user",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"test",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Moderator Only",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjBkMmE5YjU2NDkwOGVkYzRjZWU0OCIsImlhdCI6MTc2Mzc1ODc5NSwiZXhwIjoxNzYzODQ1MTk1fQ.U8-s8hazdka7m_pd898dB4tEW6SeGgkxWbionSKtHEE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/test/moderator",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"test",
+						"moderator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Only",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4ZGM1ODY5NzYzYTQzY2QyODY3NiIsImlhdCI6MTc2NDEzNDM1NCwiZXhwIjoxNzY0MjIwNzU0fQ.vmUGef2-eXa9bBwRpuhTo9Oq6c4Sbp19b3tIlQKQizs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/test/admin",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"test",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4ZGM1ODY5NzYzYTQzY2QyODY3NiIsImlhdCI6MTc2NDEzNDM1NCwiZXhwIjoxNzY0MjIwNzU0fQ.vmUGef2-eXa9bBwRpuhTo9Oq6c4Sbp19b3tIlQKQizs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Audífonos Inalámbricos Pro (Cancelación de Ruido)\",\r\n  \"description\": \"30 horas de batería, cancelación activa de ruido y sonido espacial 3D.\",\r\n  \"price\": 680,\r\n  \"stock\": 40,\r\n  \"category\": \"tecnologia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/products",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/products",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/products/69268e35869763a43cd28684",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"69268e35869763a43cd28684"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY1Njk3YWFmN2UwZDM2NDY1MjMwNiIsImlhdCI6MTc2NDEyMDIyMiwiZXhwIjoxNzY0MjA2NjIyfQ.4YO66DoP21NkIeJCBRhaEdwUTTmTOh5hxVTpaX-VvAw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Laptop Lenovo Pro\",\r\n  \"price\": 2700,\r\n  \"stock\": 35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/products/69268e35869763a43cd28684",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"69268e35869763a43cd28684"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY1Njk3YWFmN2UwZDM2NDY1MjMwNiIsImlhdCI6MTc2NDEyMDIyMiwiZXhwIjoxNzY0MjA2NjIyfQ.4YO66DoP21NkIeJCBRhaEdwUTTmTOh5hxVTpaX-VvAw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/products/69268e35869763a43cd28684",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"69268e35869763a43cd28684"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product To Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4Y2FjODY5NzYzYTQzY2QyODY2YSIsImlhdCI6MTc2NDEzNTA3OSwiZXhwIjoxNzY0MjIxNDc5fQ.wfQJKvqwRMaetWvobJ00gMD9k3PP11eWQR4Hb7E7x9s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"69268e35869763a43cd28684\",\r\n  \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/cart",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "See User Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4Y2FjODY5NzYzYTQzY2QyODY2YSIsImlhdCI6MTc2NDEzNDYxMywiZXhwIjoxNzY0MjIxMDEzfQ.zr6Da-me0b_nP8Hpln9s6xIzYtlrCbr2681a8SAXNUY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/cart",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Items",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY1YzU1YWFmN2UwZDM2NDY1MjMzMSIsImlhdCI6MTc2NDEyNDU0MSwiZXhwIjoxNzY0MjEwOTQxfQ.uOtR_vCfniUEE7BEhtwLyWYxL8NHcEQxrKyX5OA_z_o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"quantity\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/cart/69268f0b869763a43cd28699",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"cart",
+						"69268f0b869763a43cd28699"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Items",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY1YzU1YWFmN2UwZDM2NDY1MjMzMSIsImlhdCI6MTc2NDEyNDU0MSwiZXhwIjoxNzY0MjEwOTQxfQ.uOtR_vCfniUEE7BEhtwLyWYxL8NHcEQxrKyX5OA_z_o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/cart/69268f0b869763a43cd28699",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"cart",
+						"69268f0b869763a43cd28699"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY1YzU1YWFmN2UwZDM2NDY1MjMzMSIsImlhdCI6MTc2NDEyNDU0MSwiZXhwIjoxNzY0MjEwOTQxfQ.uOtR_vCfniUEE7BEhtwLyWYxL8NHcEQxrKyX5OA_z_o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/cart",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Coupons",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4ZGM1ODY5NzYzYTQzY2QyODY3NiIsImlhdCI6MTc2NDEzNTAzMSwiZXhwIjoxNzY0MjIxNDMxfQ.TcqMGYBCx0IsHlOF5GwCxwjz1i_WjPatjV-EMLR0B5o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"MIGUEL10\",\r\n  \"discountPercentage\": 10,\r\n  \"expiresAt\": \"2025-12-31\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/coupons",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Coupons",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4ZGM1ODY5NzYzYTQzY2QyODY3NiIsImlhdCI6MTc2NDEzNTAzMSwiZXhwIjoxNzY0MjIxNDMxfQ.TcqMGYBCx0IsHlOF5GwCxwjz1i_WjPatjV-EMLR0B5o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"MIGUEL10\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/coupons/validate",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"coupons",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjY4Y2FjODY5NzYzYTQzY2QyODY2YSIsImlhdCI6MTc2NDEzNTA3OSwiZXhwIjoxNzY0MjIxNDc5fQ.wfQJKvqwRMaetWvobJ00gMD9k3PP11eWQR4Hb7E7x9s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"couponCode\": \"MIGUEL10\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://proyectofinal-sv72007284-render-2025-07.onrender.com/api/checkout/session",
+					"protocol": "https",
+					"host": [
+						"proyectofinal-sv72007284-render-2025-07",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"checkout",
+						"session"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
