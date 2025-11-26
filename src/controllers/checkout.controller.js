@@ -55,8 +55,8 @@ class CheckoutController {
           quantity: item.quantity,
         })),
         discounts: stripeCoupon ? [{ coupon: stripeCoupon.id }] : [],
-        success_url: "http://localhost:6969/success",
-        cancel_url: "http://localhost:6969/cancel",
+        success_url: `${process.env.CLIENT_URL}/success`,
+        cancel_url: `${process.env.CLIENT_URL}/cancel`,
       });
 
       return res.json({ url: session.url });
